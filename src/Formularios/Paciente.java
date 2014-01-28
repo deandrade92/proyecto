@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
-public class Paciente extends javax.swing.JFrame {
+public class Paciente extends javax.swing.JInternalFrame {
     NiveldeAcceso entrada= new NiveldeAcceso();
 
     public Paciente(){
@@ -92,12 +92,12 @@ public class Paciente extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        btncancelar = new javax.swing.JButton();
         btnguardar = new javax.swing.JButton();
         btnlimpiar = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
         btnactualizar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btneliminar = new javax.swing.JButton();
+        btncancelar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtcedula = new javax.swing.JTextField();
         cbocedula = new javax.swing.JComboBox();
@@ -124,11 +124,6 @@ public class Paciente extends javax.swing.JFrame {
         txtcorreo = new javax.swing.JTextField();
         cbotipocorreo = new javax.swing.JComboBox();
         cbotipocorreo2 = new javax.swing.JComboBox();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        lblicon7 = new javax.swing.JLabel();
-        icon2 = new javax.swing.JLabel();
-        icon1 = new javax.swing.JLabel();
-        icon4 = new javax.swing.JLabel();
         icon7 = new javax.swing.JLabel();
         icon8 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -140,6 +135,10 @@ public class Paciente extends javax.swing.JFrame {
         icon3 = new javax.swing.JLabel();
         jLayeredPane4 = new javax.swing.JLayeredPane();
         icon6 = new javax.swing.JLabel();
+        jLayeredPane5 = new javax.swing.JLayeredPane();
+        icon1 = new javax.swing.JLabel();
+        icon2 = new javax.swing.JLabel();
+        icon4 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -193,13 +192,53 @@ public class Paciente extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        btnguardar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        btnguardar.setText("Guardar");
+        btnguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnguardarActionPerformed(evt);
+            }
+        });
+
+        btnlimpiar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        btnlimpiar.setText("Limpiar");
+        btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlimpiarActionPerformed(evt);
+            }
+        });
+
+        btnbuscar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        btnbuscar.setText("Buscar");
+        btnbuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbuscarActionPerformed(evt);
+            }
+        });
+
+        btnactualizar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        btnactualizar.setText("Actualizar");
+        btnactualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnactualizarActionPerformed(evt);
+            }
+        });
+
+        btneliminar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        btneliminar.setText("Eliminar");
+        btneliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btneliminarActionPerformed(evt);
+            }
+        });
 
         btncancelar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         btncancelar.setText("Cancelar");
@@ -209,65 +248,31 @@ public class Paciente extends javax.swing.JFrame {
             }
         });
 
-        btnguardar.setText("Guardar");
-        btnguardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnguardarActionPerformed(evt);
-            }
-        });
-
-        btnlimpiar.setText("Limpiar");
-
-        btnbuscar.setText("Buscar");
-        btnbuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbuscarActionPerformed(evt);
-            }
-        });
-
-        btnactualizar.setText("Actualizar");
-        btnactualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnactualizarActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Eliminar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(btnguardar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnguardar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnlimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnlimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnactualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnactualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btneliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btncancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btncancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnactualizar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
-                    .addComponent(btnbuscar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnguardar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnlimpiar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btncancelar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(btnlimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+            .addComponent(btnbuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnactualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btneliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btncancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnguardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
@@ -467,37 +472,6 @@ public class Paciente extends javax.swing.JFrame {
             }
         });
 
-        jLayeredPane1.setBackground(new java.awt.Color(204, 255, 255));
-
-        lblicon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
-        lblicon7.setBounds(30, 30, 23, 21);
-        jLayeredPane1.add(lblicon7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
-        icon2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                icon2MouseEntered(evt);
-            }
-        });
-        icon2.setBounds(0, 0, 23, 21);
-        jLayeredPane1.add(icon2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
-        icon1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                icon1MouseEntered(evt);
-            }
-        });
-        icon1.setBounds(0, 0, 20, 20);
-        jLayeredPane1.add(icon1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
-        icon4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                icon4MouseEntered(evt);
-            }
-        });
-
         icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -516,7 +490,7 @@ public class Paciente extends javax.swing.JFrame {
         jLabel8.setText("Apellidos");
 
         txtapellidos.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        txtapellidos.setToolTipText("Ejemplo: Rodrigez Peraza");
+        txtapellidos.setToolTipText("Introduzca el apellido del paciente. Ejemplo: Rodrigez Peraza");
         txtapellidos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtapellidosKeyTyped(evt);
@@ -562,19 +536,41 @@ public class Paciente extends javax.swing.JFrame {
         icon6.setBounds(0, 0, 23, 30);
         jLayeredPane4.add(icon6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
+        icon1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                icon1MouseEntered(evt);
+            }
+        });
+        icon1.setBounds(0, 0, 23, 20);
+        jLayeredPane5.add(icon1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
+        icon2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                icon2MouseEntered(evt);
+            }
+        });
+        icon2.setBounds(0, 0, 23, 20);
+        jLayeredPane5.add(icon2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
+        icon4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                icon4MouseEntered(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(1, 1, 1)
-                        .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(icon8))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -595,14 +591,6 @@ public class Paciente extends javax.swing.JFrame {
                         .addComponent(cbocodtfijo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtnumtfijo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtapellidospm, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtnombrespm, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -633,50 +621,58 @@ public class Paciente extends javax.swing.JFrame {
                                 .addComponent(cbocedula, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtcedula, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtapellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(icon4))
+                            .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(1, 1, 1)
+                                .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel13))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtapellidospm, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtnombrespm, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtapellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(icon4)))
-                .addContainerGap(37, Short.MAX_VALUE))
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(icon8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(txtcedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbocedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
+                            .addComponent(jLabel2))
+                        .addGap(23, 23, 23)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel3)
                             .addComponent(txtnombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)
                             .addComponent(txtapellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(icon4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17)))
+                            .addComponent(icon4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)
+                        .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel5)
                     .addComponent(cbosexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -688,18 +684,20 @@ public class Paciente extends javax.swing.JFrame {
                     .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLayeredPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtnombrespm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(txtapellidospm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(icon8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtnombrespm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(txtapellidospm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel9)
@@ -731,7 +729,7 @@ public class Paciente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -747,6 +745,182 @@ public class Paciente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiarActionPerformed
+        limpiar();
+    }//GEN-LAST:event_btnlimpiarActionPerformed
+
+    private void btnbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarActionPerformed
+       String ced1="", ced2="", cedula="", sSQL="", status="", nombres="", apellidos="", sexo="", fecha="",dia="" ,mes="" ,ano="", edad="", direccion="", nombrespm="", apellidospm="", codtmovil="", numtmovil="", codtfijo="", numtfijo="", correo1="", correo2="", correo3="";
+       
+       ced1=cbocedula.getSelectedItem().toString();
+       ced2=txtcedula.getText();
+       cedula=ced1+ced2;
+       
+       sSQL="SELECT pac_nombres, pac_apellidos, pac_sexo, pac_fecha, pac_edad, pac_direccion, pac_nombrespm, pac_apellidospm, pac_codtmovil, pac_numtmovil, pac_codtfijo, pac_numtfijo, pac_usuariocorreo, pac_tipocorreo,  pac_extensioncorreo, pac_status FROM paciente WHERE CONCAT (pac_tipocedula, pac_cedula) = '"+cedula+"'";
+       
+       ConexionMySQL mysql =new ConexionMySQL();
+       Connection cn=mysql.Conectar();
+       
+       try {
+           Statement st=cn.createStatement();
+           ResultSet rs = st.executeQuery(sSQL);
+           while(rs.next()){
+                 nombres=rs.getString("pac_nombres");
+                 apellidos=rs.getString("pac_apellidos");
+                 sexo=rs.getString("pac_sexo");
+                 fecha=rs.getString("pac_fecha");
+                 edad=rs.getString("pac_edad");
+                 direccion=rs.getString("pac_direccion");
+                 nombrespm=rs.getString("pac_nombrespm");
+                 apellidospm=rs.getString("pac_apellidospm");
+                 codtmovil=rs.getString("pac_codtmovil");
+                 numtmovil=rs.getString("pac_numtmovil");
+                 codtfijo=rs.getString("pac_codtfijo");
+                 numtfijo=rs.getString("pac_numtfijo");
+                 correo1=rs.getString("pac_usuariocorreo");
+                 correo2=rs.getString("pac_tipocorreo");
+                 correo3=rs.getString("pac_extensioncorreo");
+                 status=rs.getString("pac_status");
+                 ano=fecha.substring(0, 4);
+                 mes=fecha.substring(5, 7);
+                 dia=fecha.substring(8, 10);
+           }
+           
+           if(status.equals("A")){
+               inhabilitarcedula();
+               txtnombres.setText(nombres);
+               txtapellidos.setText(apellidos);
+               cbosexo.setSelectedItem(sexo);
+               txtedad.setText(edad);
+               txtdireccion.setText(direccion);
+               clrfecha.setSelectedDate(Integer.parseInt(ano), Integer.parseInt(mes), Integer.parseInt(dia));
+               cbocodtmovil.setSelectedItem(codtmovil);
+               txtnumtmovil.setText(numtmovil);
+               cbocodtfijo.setSelectedItem(codtfijo);
+               txtnumtfijo.setText(numtfijo);
+               txtcorreo.setText(correo1);
+               cbotipocorreo.setSelectedItem(correo2);
+               cbotipocorreo2.setSelectedItem(correo3);
+               NiveldeAcceso entrada= new NiveldeAcceso();
+               Statement stmt=cn.createStatement();
+               int result=stmt.executeUpdate("INSERT INTO bitacora VALUES (null,'"+entrada.nombre_usuario+"', 'Registro y Consulta de Pacientes', 'Busco paciente CI: "+cedula+"', now())");
+               
+           }
+           else{
+               JOptionPane.showMessageDialog(null,"No se encontro nungun paciente con este numero de cedula"+cedula);
+           }
+         }
+         catch (SQLException ex) {
+             JOptionPane.showMessageDialog(null, ex);
+        }
+       
+    }//GEN-LAST:event_btnbuscarActionPerformed
+
+    private void btnactualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnactualizarActionPerformed
+        String ced1="", ced2="", nombres="", apellidos="", sexo="", direccion="",dia="", mes="", ano="", fecha="", edad="",nombrespm="",apellidospm="", codtmovil="", numtmovil="", codtfijo="",numtfijo="", correo1="", correo2="", correo3="", sSQL="",cedula="";
+        
+        ced1=cbocedula.getSelectedItem().toString();
+        ced2=txtcedula.getText();
+        cedula=ced1+ced2;
+        nombres=txtnombres.getText();
+        apellidos=txtapellidos.getText();
+        sexo=cbosexo.getSelectedItem().toString();
+        direccion=txtdireccion.getText();
+        dia=clrfecha.getSelectedDay();
+        mes=clrfecha.getSelectedMonth();
+        ano=clrfecha.getSelectedYear();
+        fecha=ano+"/"+mes+"/"+dia;    
+        edad=txtedad.getText();
+        nombrespm=txtnombrespm.getText();
+        apellidospm=txtapellidos.getText();
+        if((!nombrespm.equals(""))&&(!apellidospm.equals(""))){
+            nombrespm=txtnombrespm.getText();
+            apellidospm=txtapellidos.getText();
+        }
+        else{
+            nombrespm="";
+            apellidospm="";
+        }
+        codtmovil=cbocodtmovil.getSelectedItem().toString();
+        numtmovil=txtnumtmovil.getText();
+        if((codtmovil.equals("Seleccione"))&& (numtmovil.equals(""))){
+            codtmovil=""; 
+            numtmovil="";
+        }
+        else{
+            codtmovil=cbocodtmovil.getSelectedItem().toString();
+            numtmovil=txtnumtmovil.getText();
+        }
+        codtfijo=cbocodtfijo.getSelectedItem().toString();
+        numtfijo=txtnumtfijo.getText();
+        if((codtfijo.equals("Seleccione"))&& (numtfijo.equals(""))){
+            codtfijo=""; 
+            numtfijo="";
+        }
+        else{
+            codtfijo=cbocodtfijo.getSelectedItem().toString();
+            numtfijo=txtnumtfijo.getText();
+        }
+        correo1=txtcorreo.getText();
+        correo2=cbotipocorreo.getSelectedItem().toString();
+        correo3=cbotipocorreo2.getSelectedItem().toString();
+        if((correo1.equals("")) && (correo2.equals("Seleccione")) && (correo3.equals("Seleccione"))){
+            correo1=""; 
+            correo2="";
+            correo3="";
+        }
+        else{
+            correo1=txtcorreo.getText();
+            correo2=cbotipocorreo.getSelectedItem().toString();
+            correo3=cbotipocorreo2.getSelectedItem().toString();
+        }
+        ConexionMySQL mysql=new ConexionMySQL();
+        Connection cn = mysql.Conectar();
+        
+        sSQL="UPDATE paciente SET pac_nombres='"+nombres+"', pac_apellidos='"+apellidos+"', pac_sexo='"+sexo+"', pac_edad='"+edad+"', pac_nombrespm='"+nombrespm+"', pac_apellidospm='"+apellidospm+"', pac_direccion='"+direccion+"', pac_fecha='"+fecha+"', pac_codtmovil='"+codtmovil+"', pac_numtmovil='"+numtmovil+"', pac_codtfijo='"+codtfijo+"', pac_numtfijo='"+numtfijo+"', pac_usuariocorreo='"+correo1+"', pac_tipocorreo='"+correo2+"', pac_extensioncorreo='"+correo3+"' WHERE CONCAT (pac_tipocedula, pac_cedula) = '"+cedula+"'";
+        
+        try {
+            PreparedStatement pst=cn.prepareStatement(sSQL);
+            int n=pst.executeUpdate();
+            if(n>0){
+                 JOptionPane.showMessageDialog(null,"Actualizacion Satisfactoria");
+                 limpiar();
+                 NiveldeAcceso entrada= new NiveldeAcceso();
+                 Statement stmt=cn.createStatement();
+                 int result=stmt.executeUpdate("INSERT INTO bitacora VALUES (null,'"+entrada.nombre_usuario+"', 'Registro y Consulta de Pacientes', 'Actualizo paciente CI: "+cedula+"', now())");
+            }      
+        } 
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_btnactualizarActionPerformed
+
+    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
+        String cedula="",ced1="", ced2="",sSQL="";
+        
+        ced1=cbocedula.getSelectedItem().toString();
+        ced2=txtcedula.getText();
+        cedula=ced1+ced2;
+        
+        ConexionMySQL mysql =new ConexionMySQL();
+        Connection cn=mysql.Conectar();
+            
+        sSQL="UPDATE paciente SET pac_status='I' WHERE CONCAT (pac_tipocedula, pac_cedula)='"+cedula+"'";
+        try {
+            PreparedStatement pst=cn.prepareStatement(sSQL);
+            int n=pst.executeUpdate();
+            if(n>0){
+                 JOptionPane.showMessageDialog(null,"Paciente eliminado Satisfactoriamente");
+                 NiveldeAcceso entrada= new NiveldeAcceso();
+                 Statement stmt=cn.createStatement();
+                 int result=stmt.executeUpdate("INSERT INTO bitacora VALUES (null,'"+entrada.nombre_usuario+"', 'Registro y Consulta de Pacientes', 'Elimino paciente CI: "+cedula+"', now())");
+            }      
+        } 
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex);
+        }
+    }//GEN-LAST:event_btneliminarActionPerformed
 
     private void btncancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelarActionPerformed
         this.dispose();
@@ -779,6 +953,173 @@ public class Paciente extends javax.swing.JFrame {
     private void cbotipocorreo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbotipocorreo2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbotipocorreo2ActionPerformed
+
+    private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
+        String ced1="", ced2="", nombres="", apellidos="", sexo="", direccion="",dia="", mes="", ano="", fecha="", edad="",nombrespm="",apellidospm="", movilcod="", movilnum="", fijocod="",fijonum="", correo1="", correo2="", correo3="", sSQL="",status="A",sSQL2="",cedula="", status2="",datos="",sSQL3="";
+        
+        inhabilitariconos();
+        ced1=cbocedula.getSelectedItem().toString();
+        ced2=txtcedula.getText();
+        cedula=ced1+ced2;
+        nombres=txtnombres.getText();
+        apellidos=txtapellidos.getText();
+        sexo=cbosexo.getSelectedItem().toString();
+        direccion=txtdireccion.getText();
+        dia=clrfecha.getSelectedDay();
+        mes=clrfecha.getSelectedMonth();
+        ano=clrfecha.getSelectedYear();
+        fecha=ano+"/"+mes+"/"+dia;    
+        edad=txtedad.getText();
+        nombrespm=txtnombrespm.getText();
+        apellidospm=txtapellidos.getText();
+        if((!nombrespm.equals(""))&&(!apellidospm.equals(""))){
+            nombrespm=txtnombrespm.getText();
+            apellidospm=txtapellidos.getText();
+        }
+        else{
+            nombrespm="";
+            apellidospm="";
+        }
+        movilcod=cbocodtmovil.getSelectedItem().toString();
+        movilnum=txtnumtmovil.getText();
+        if((movilcod.equals("Seleccione"))&& (movilnum.equals(""))){
+            movilcod=""; 
+            movilnum="";
+        }
+        else{
+            movilcod=cbocodtmovil.getSelectedItem().toString();
+            movilnum=txtnumtmovil.getText();
+        }
+        fijocod=cbocodtfijo.getSelectedItem().toString();
+        fijonum=txtnumtfijo.getText();
+        if((fijocod.equals("Seleccione"))&& (fijonum.equals(""))){
+            fijocod=""; 
+            fijonum="";
+        }
+        else{
+            fijocod=cbocodtfijo.getSelectedItem().toString();
+            fijonum=txtnumtfijo.getText();
+        }
+        correo1=txtcorreo.getText();
+        correo2=cbotipocorreo.getSelectedItem().toString();
+        correo3=cbotipocorreo2.getSelectedItem().toString();
+        if((correo1.equals("")) && (correo2.equals("Seleccione")) && (correo3.equals("Seleccione"))){
+            correo1=""; 
+            correo2="";
+            correo3="";
+        }
+        else{
+            correo1=txtcorreo.getText();
+            correo2=cbotipocorreo.getSelectedItem().toString();
+            correo3=cbotipocorreo2.getSelectedItem().toString();
+        }
+        
+        ConexionMySQL mysql = new ConexionMySQL();
+        Connection cn = mysql.Conectar();
+        
+        if(ced1.equals("Seleccione")){
+            icon1.setVisible(true);
+        }
+        else{
+            if(ced2.equals("")){
+            icon2.setVisible(true);
+            }
+            else{
+                sSQL2="SELECT pac_tipocedula, pac_cedula, pac_status FROM paciente WHERE CONCAT (pac_tipocedula, pac_cedula) LIKE '%"+cedula+"%'";
+                try{
+                    Statement st=cn.createStatement();
+                    ResultSet rs = st.executeQuery(sSQL2);
+                    while(rs.next()){
+                        datos=rs.getString("pac_tipocedula")+rs.getString("pac_cedula");
+                        status2=rs.getString("pac_status");
+                    }
+                    if(cedula.equals(datos) && status2.equals("A")){
+                        JOptionPane.showMessageDialog(null,"El paciente ya se encuentra registrado");
+                    }
+                    if(cedula.equals(datos) && !status2.equals("A")){
+                        new CambioDeStatus().setVisible(true);
+                    }
+                    else{
+                        if(nombres.equals("")){
+                           icon3.setVisible(true); 
+                        }
+                        else{
+                            if(apellidos.equals("")){
+                                icon1.setVisible(true);
+                            }
+                            else{
+                                if(sexo.equals("Seleccione")){
+                                    icon5.setVisible(true);
+                                }
+                                else{
+                                     SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
+                                     Date fechaDate = new Date();
+                                     String fechaactual=formateador.format(fechaDate);
+                                     String diasistema="", messistema="", anosistema="";
+                                     diasistema=fechaactual.substring(0, 2);
+                                     messistema=fechaactual.substring(3, 5);
+                                     anosistema=fechaactual.substring(6, 10);
+                                     if(dia.equals(diasistema)&&mes.equals(messistema)&&ano.equals(anosistema)){
+                                        icon6.setVisible(true);
+                                     }
+                                     else{
+                                         if(edad.equals("")){
+                                             icon7.setVisible(true);
+                                         }
+                                         else{
+                                             if(direccion.equals("")){
+                                                 icon8.setVisible(true);
+                                             }
+                                             else{
+                                                 sSQL="INSERT INTO paciente(pac_tipocedula, pac_cedula, pac_nombres, pac_apellidos, pac_sexo, pac_fecha, pac_edad, pac_direccion, pac_nombrespm, pac_apellidospm, pac_codtmovil, pac_numtmovil, pac_codtfijo, pac_numtfijo, pac_usuariocorreo, pac_tipocorreo, pac_extensioncorreo, pac_status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                                                 String mensaje="El paciente fue registrado exitosamente";
+                                                 try {
+                                                     PreparedStatement pst = cn.prepareStatement(sSQL);
+                                                     pst.setString(1, ced1);
+                                                     pst.setString(2, ced2);
+                                                     pst.setString(3, nombres);
+                                                     pst.setString(4, apellidos);
+                                                     pst.setString(5, sexo);
+                                                     pst.setString(6, fecha);
+                                                     pst.setString(7, edad);
+                                                     pst.setString(8, direccion);
+                                                     pst.setString(9, nombrespm);
+                                                     pst.setString(10, apellidospm);
+                                                     pst.setString(11, movilcod);
+                                                     pst.setString(12, movilnum);
+                                                     pst.setString(13, fijocod);
+                                                     pst.setString(14, fijonum);
+                                                     pst.setString(15, correo1);
+                                                     pst.setString(16, correo2);
+                                                     pst.setString(17, correo3);
+                                                     pst.setString(18, status);
+                                         
+                                                     int n = pst.executeUpdate();
+                                                     if (n > 0) {
+                                                         JOptionPane.showMessageDialog(null, mensaje);
+                                                         limpiar();
+                                                         NiveldeAcceso entrada= new NiveldeAcceso();
+                                                         Statement stmt=cn.createStatement();
+                                                         int result=stmt.executeUpdate("INSERT INTO bitacora VALUES (null,'"+entrada.nombre_usuario+"', 'Registro y Consulta de Pacientes', 'Guardo paciente CI: "+cedula+"', now())");
+                                                     }
+                                                 }
+                                                 catch(SQLException ex){
+                                                     JOptionPane.showMessageDialog(null,ex);
+                                                 }
+                                             }
+                                         } 
+                                     }
+                                }
+                            }
+                        } 
+                    }
+                }
+            catch (SQLException ex){
+                    JOptionPane.showMessageDialog(null,ex);
+            }
+            }
+        }
+    }//GEN-LAST:event_btnguardarActionPerformed
 
     private void clrfechaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_clrfechaFocusLost
         
@@ -924,17 +1265,13 @@ public class Paciente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtnumtmovilFocusLost
 
-    private void icon1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon1MouseEntered
-        JOptionPane.showMessageDialog(null,"No selecciono el tipo de cedula", "informacion", 2);
-    }//GEN-LAST:event_icon1MouseEntered
-
     private void lblicon3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblicon3MouseEntered
         JOptionPane.showMessageDialog(null,"El campo NOMBRES esta vacio", "informacion", 2);
     }//GEN-LAST:event_lblicon3MouseEntered
 
-    private void icon4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon4MouseEntered
-        JOptionPane.showMessageDialog(null,"El campo APELLIDOS esta vacio", "informacion", 2);
-    }//GEN-LAST:event_icon4MouseEntered
+    private void icon1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon1MouseEntered
+       JOptionPane.showMessageDialog(null,"No selecciono el tipo de cedula", "informacion", 2);
+    }//GEN-LAST:event_icon1MouseEntered
 
     private void icon5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon5MouseEntered
         JOptionPane.showMessageDialog(null,"No ha seleccionado el SEXO del paciente", "informacion", 2);
@@ -971,10 +1308,6 @@ public class Paciente extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txtnumtfijoKeyTyped
-
-    private void icon2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon2MouseEntered
-        JOptionPane.showMessageDialog(null,"El campo CEDULA esta vacio", "informacion", 2);
-    }//GEN-LAST:event_icon2MouseEntered
 
     private void icon3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon3MouseEntered
         JOptionPane.showMessageDialog(null,"El campo NOMBRES esta vacio", "informacion", 2);
@@ -1015,344 +1348,13 @@ public class Paciente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formComponentShown
 
-    private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
-       String ced1="", ced2="", nombres="", apellidos="", sexo="", direccion="",dia="", mes="", ano="", fecha="", edad="",nombrespm="",apellidospm="", movilcod="", movilnum="", fijocod="",fijonum="", correo1="", correo2="", correo3="", sSQL="",status="A",sSQL2="",cedula="", status2="",datos="",sSQL3="";
-        
-        inhabilitariconos();
-        ced1=cbocedula.getSelectedItem().toString();
-        ced2=txtcedula.getText();
-        cedula=ced1+ced2;
-        nombres=txtnombres.getText();
-        apellidos=txtapellidos.getText();
-        sexo=cbosexo.getSelectedItem().toString();
-        direccion=txtdireccion.getText();
-        dia=clrfecha.getSelectedDay();
-        mes=clrfecha.getSelectedMonth();
-        ano=clrfecha.getSelectedYear();
-        fecha=ano+"/"+mes+"/"+dia;    
-        edad=txtedad.getText();
-        nombrespm=txtnombrespm.getText();
-        apellidospm=txtapellidos.getText();
-        if((!nombrespm.equals(""))&&(!apellidospm.equals(""))){
-            nombrespm=txtnombrespm.getText();
-            apellidospm=txtapellidos.getText();
-        }
-        else{
-            nombrespm="";
-            apellidospm="";
-        }
-        movilcod=cbocodtmovil.getSelectedItem().toString();
-        movilnum=txtnumtmovil.getText();
-        if((movilcod.equals("Seleccione"))&& (movilnum.equals(""))){
-            movilcod=""; 
-            movilnum="";
-        }
-        else{
-            movilcod=cbocodtmovil.getSelectedItem().toString();
-            movilnum=txtnumtmovil.getText();
-        }
-        fijocod=cbocodtfijo.getSelectedItem().toString();
-        fijonum=txtnumtfijo.getText();
-        if((fijocod.equals("Seleccione"))&& (fijonum.equals(""))){
-            fijocod=""; 
-            fijonum="";
-        }
-        else{
-            fijocod=cbocodtfijo.getSelectedItem().toString();
-            fijonum=txtnumtfijo.getText();
-        }
-        correo1=txtcorreo.getText();
-        correo2=cbotipocorreo.getSelectedItem().toString();
-        correo3=cbotipocorreo2.getSelectedItem().toString();
-        if((correo1.equals("")) && (correo2.equals("Seleccione")) && (correo3.equals("Seleccione"))){
-            correo1=""; 
-            correo2="";
-            correo3="";
-        }
-        else{
-            correo1=txtcorreo.getText();
-            correo2=cbotipocorreo.getSelectedItem().toString();
-            correo3=cbotipocorreo2.getSelectedItem().toString();
-        }
-        
-        ConexionMySQL mysql = new ConexionMySQL();
-        Connection cn = mysql.Conectar();
-        
-        if(ced1.equals("Seleccione")){
-            icon1.setVisible(true);
-        }
-        else{
-            if(ced2.equals("")){
-            icon2.setVisible(true);
-            }
-            else{
-                sSQL2="SELECT pac_tipocedula, pac_cedula, pac_status FROM paciente WHERE CONCAT (pac_tipocedula, pac_cedula) LIKE '%"+cedula+"%'";
-                try{
-                    Statement st=cn.createStatement();
-                    ResultSet rs = st.executeQuery(sSQL2);
-                    while(rs.next()){
-                        datos=rs.getString("pac_tipocedula")+rs.getString("pac_cedula");
-                        status2=rs.getString("pac_status");
-                    }
-                    if(cedula.equals(datos) && status2.equals("A")){
-                        JOptionPane.showMessageDialog(null,"El paciente ya se encuentra registrado");
-                    }
-                    if(cedula.equals(datos) && !status2.equals("A")){
-                        new CambioDeStatus().setVisible(true);
-                    }
-                    else{
-                        if(nombres.equals("")){
-                           icon3.setVisible(true); 
-                        }
-                        else{
-                            if(apellidos.equals("")){
-                                icon4.setVisible(true);
-                            }
-                            else{
-                                if(sexo.equals("Seleccione")){
-                                    icon5.setVisible(true);
-                                }
-                                else{
-                                     SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
-                                     Date fechaDate = new Date();
-                                     String fechaactual=formateador.format(fechaDate);
-                                     String diasistema="", messistema="", anosistema="";
-                                     diasistema=fechaactual.substring(0, 2);
-                                     messistema=fechaactual.substring(3, 5);
-                                     anosistema=fechaactual.substring(6, 10);
-                                     if(dia.equals(diasistema)&&mes.equals(messistema)&&ano.equals(anosistema)){
-                                        icon6.setVisible(true);
-                                     }
-                                     else{
-                                         if(edad.equals("")){
-                                             icon7.setVisible(true);
-                                         }
-                                         else{
-                                             if(direccion.equals("")){
-                                                 icon8.setVisible(true);
-                                             }
-                                             else{
-                                                 sSQL="INSERT INTO paciente(pac_tipocedula, pac_cedula, pac_nombres, pac_apellidos, pac_sexo, pac_fecha, pac_edad, pac_direccion, pac_nombrespm, pac_apellidospm, pac_codtmovil, pac_numtmovil, pac_codtfijo, pac_numtfijo, pac_usuariocorreo, pac_tipocorreo, pac_extensioncorreo, pac_status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-                                                 String mensaje="El paciente fue registrado exitosamente";
-                                                 try {
-                                                     PreparedStatement pst = cn.prepareStatement(sSQL);
-                                                     pst.setString(1, ced1);
-                                                     pst.setString(2, ced2);
-                                                     pst.setString(3, nombres);
-                                                     pst.setString(4, apellidos);
-                                                     pst.setString(5, sexo);
-                                                     pst.setString(6, fecha);
-                                                     pst.setString(7, edad);
-                                                     pst.setString(8, direccion);
-                                                     pst.setString(9, nombrespm);
-                                                     pst.setString(10, apellidospm);
-                                                     pst.setString(11, movilcod);
-                                                     pst.setString(12, movilnum);
-                                                     pst.setString(13, fijocod);
-                                                     pst.setString(14, fijonum);
-                                                     pst.setString(15, correo1);
-                                                     pst.setString(16, correo2);
-                                                     pst.setString(17, correo3);
-                                                     pst.setString(18, status);
-                                         
-                                                     int n = pst.executeUpdate();
-                                                     if (n > 0) {
-                                                         JOptionPane.showMessageDialog(null, mensaje);
-                                                         limpiar();
-                                                         NiveldeAcceso entrada= new NiveldeAcceso();
-                                                         Statement stmt=cn.createStatement();
-                                                         int result=stmt.executeUpdate("INSERT INTO bitacora VALUES (null,'"+entrada.nombre_usuario+"', 'Registro y Consulta de Pacientes', 'Guardo paciente CI: "+cedula+"', now())");
-                                                     }
-                                                 }
-                                                 catch(SQLException ex){
-                                                     JOptionPane.showMessageDialog(null,ex);
-                                                 }
-                                             }
-                                         } 
-                                     }
-                                }
-                            }
-                        } 
-                    }
-                }
-            catch (SQLException ex){
-                    JOptionPane.showMessageDialog(null,ex);
-            }
-            }
-        }
-    }//GEN-LAST:event_btnguardarActionPerformed
+    private void icon4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon4MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_icon4MouseEntered
 
-    private void btnbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarActionPerformed
-        String ced1="", ced2="", cedula="", sSQL="", status="", nombres="", apellidos="", sexo="", fecha="",dia="" ,mes="" ,ano="", edad="", direccion="", nombrespm="", apellidospm="", codtmovil="", numtmovil="", codtfijo="", numtfijo="", correo1="", correo2="", correo3="";
-       
-       ced1=cbocedula.getSelectedItem().toString();
-       ced2=txtcedula.getText();
-       cedula=ced1+ced2;
-       if(ced1.equals("Seleccione") && ced2.equals("")){
-           JOptionPane.showMessageDialog(null,"No selecciono, ni introdujo el numero numero de cedula para efectuar la busqueda");
-       }
-       if(!ced1.equals("Seleccione") && ced2.equals("")){
-           JOptionPane.showMessageDialog(null,"No introdujo el nuemro de cedula para efectuar la busqueda");
-       }
-       if(ced1.equals("Seleccione") && !ced2.equals("")){
-           JOptionPane.showMessageDialog(null,"No selecciono el tipo de cedula para efectuar la busqueda");
-       }
-       if(!ced1.equals("Seleccione") && !ced2.equals("")){
-        
-       sSQL="SELECT pac_nombres, pac_apellidos, pac_sexo, pac_fecha, pac_edad, pac_direccion, pac_nombrespm, pac_apellidospm, pac_codtmovil, pac_numtmovil, pac_codtfijo, pac_numtfijo, pac_usuariocorreo, pac_tipocorreo,  pac_extensioncorreo, pac_status FROM paciente WHERE CONCAT (pac_tipocedula, pac_cedula) = '"+cedula+"'";
-       
-       ConexionMySQL mysql =new ConexionMySQL();
-       Connection cn=mysql.Conectar();
-       
-       try {
-           Statement st=cn.createStatement();
-           ResultSet rs = st.executeQuery(sSQL);
-           while(rs.next()){
-                 nombres=rs.getString("pac_nombres");
-                 apellidos=rs.getString("pac_apellidos");
-                 sexo=rs.getString("pac_sexo");
-                 fecha=rs.getString("pac_fecha");
-                 edad=rs.getString("pac_edad");
-                 direccion=rs.getString("pac_direccion");
-                 nombrespm=rs.getString("pac_nombrespm");
-                 apellidospm=rs.getString("pac_apellidospm");
-                 codtmovil=rs.getString("pac_codtmovil");
-                 numtmovil=rs.getString("pac_numtmovil");
-                 codtfijo=rs.getString("pac_codtfijo");
-                 numtfijo=rs.getString("pac_numtfijo");
-                 correo1=rs.getString("pac_usuariocorreo");
-                 correo2=rs.getString("pac_tipocorreo");
-                 correo3=rs.getString("pac_extensioncorreo");
-                 status=rs.getString("pac_status");
-                 ano=fecha.substring(0, 4);
-                 mes=fecha.substring(5, 7);
-                 dia=fecha.substring(8, 10);
-           }
-           
-           if(status.equals("A")){
-               inhabilitarcedula();
-               txtnombres.setText(nombres);
-               txtapellidos.setText(apellidos);
-               cbosexo.setSelectedItem(sexo);
-               txtedad.setText(edad);
-               txtdireccion.setText(direccion);
-               clrfecha.setSelectedDate(Integer.parseInt(ano), Integer.parseInt(mes), Integer.parseInt(dia));
-               cbocodtmovil.setSelectedItem(codtmovil);
-               txtnumtmovil.setText(numtmovil);
-               cbocodtfijo.setSelectedItem(codtfijo);
-               txtnumtfijo.setText(numtfijo);
-               txtcorreo.setText(correo1);
-               cbotipocorreo.setSelectedItem(correo2);
-               cbotipocorreo2.setSelectedItem(correo3);
-           }
-           else{
-               JOptionPane.showMessageDialog(null,"No se encontro nungun paciente con este numero de cedula"+cedula);
-           }
-         }
-         catch (SQLException ex) {
-             JOptionPane.showMessageDialog(null, ex);
-        }
-       }
-    }//GEN-LAST:event_btnbuscarActionPerformed
-
-    private void btnactualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnactualizarActionPerformed
-        String ced1="", ced2="", nombres="", apellidos="", sexo="", direccion="",dia="", mes="", ano="", fecha="", edad="",nombrespm="",apellidospm="", codtmovil="", numtmovil="", codtfijo="",numtfijo="", correo1="", correo2="", correo3="", sSQL="",cedula="";
-        
-        ced1=cbocedula.getSelectedItem().toString();
-        ced2=txtcedula.getText();
-        cedula=ced1+ced2;
-        nombres=txtnombres.getText();
-        apellidos=txtapellidos.getText();
-        sexo=cbosexo.getSelectedItem().toString();
-        direccion=txtdireccion.getText();
-        dia=clrfecha.getSelectedDay();
-        mes=clrfecha.getSelectedMonth();
-        ano=clrfecha.getSelectedYear();
-        fecha=ano+"/"+mes+"/"+dia;    
-        edad=txtedad.getText();
-        nombrespm=txtnombrespm.getText();
-        apellidospm=txtapellidos.getText();
-        if((!nombrespm.equals(""))&&(!apellidospm.equals(""))){
-            nombrespm=txtnombrespm.getText();
-            apellidospm=txtapellidos.getText();
-        }
-        else{
-            nombrespm="";
-            apellidospm="";
-        }
-        codtmovil=cbocodtmovil.getSelectedItem().toString();
-        numtmovil=txtnumtmovil.getText();
-        if((codtmovil.equals("Seleccione"))&& (numtmovil.equals(""))){
-            codtmovil=""; 
-            numtmovil="";
-        }
-        else{
-            codtmovil=cbocodtmovil.getSelectedItem().toString();
-            numtmovil=txtnumtmovil.getText();
-        }
-        codtfijo=cbocodtfijo.getSelectedItem().toString();
-        numtfijo=txtnumtfijo.getText();
-        if((codtfijo.equals("Seleccione"))&& (numtfijo.equals(""))){
-            codtfijo=""; 
-            numtfijo="";
-        }
-        else{
-            codtfijo=cbocodtfijo.getSelectedItem().toString();
-            numtfijo=txtnumtfijo.getText();
-        }
-        correo1=txtcorreo.getText();
-        correo2=cbotipocorreo.getSelectedItem().toString();
-        correo3=cbotipocorreo2.getSelectedItem().toString();
-        if((correo1.equals("")) && (correo2.equals("Seleccione")) && (correo3.equals("Seleccione"))){
-            correo1=""; 
-            correo2="";
-            correo3="";
-        }
-        else{
-            correo1=txtcorreo.getText();
-            correo2=cbotipocorreo.getSelectedItem().toString();
-            correo3=cbotipocorreo2.getSelectedItem().toString();
-        }
-        ConexionMySQL mysql=new ConexionMySQL();
-        Connection cn = mysql.Conectar();
-        
-        sSQL="UPDATE paciente SET pac_nombres='"+nombres+"', pac_apellidos='"+apellidos+"', pac_sexo='"+sexo+"', pac_edad='"+edad+"', pac_nombrespm='"+nombrespm+"', pac_apellidospm='"+apellidospm+"', pac_direccion='"+direccion+"', pac_fecha='"+fecha+"', pac_codtmovil='"+codtmovil+"', pac_numtmovil='"+numtmovil+"', pac_codtfijo='"+codtfijo+"', pac_numtfijo='"+numtfijo+"', pac_usuariocorreo='"+correo1+"', pac_tipocorreo='"+correo2+"', pac_extensioncorreo='"+correo3+"' WHERE CONCAT (pac_tipocedula, pac_cedula) = '"+cedula+"'";
-        
-        try {
-            PreparedStatement pst=cn.prepareStatement(sSQL);
-            int n=pst.executeUpdate();
-            if(n>0){
-                 JOptionPane.showMessageDialog(null,"Actualizacion Satisfactoria");
-                 limpiar();
-            }      
-        } 
-        catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null,ex);
-        }
-    }//GEN-LAST:event_btnactualizarActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String cedula="",ced1="", ced2="",sSQL="";
-        
-        ced1=cbocedula.getSelectedItem().toString();
-        ced2=txtcedula.getText();
-        cedula=ced1+ced2;
-        
-        ConexionMySQL mysql =new ConexionMySQL();
-        Connection cn=mysql.Conectar();
-            
-        sSQL="UPDATE paciente SET pac_status='I' WHERE CONCAT (pac_tipocedula, pac_cedula)='"+cedula+"'";
-        try {
-            PreparedStatement pst=cn.prepareStatement(sSQL);
-            int n=pst.executeUpdate();
-            if(n>0){
-                 JOptionPane.showMessageDialog(null,"Paciente eliminado Satisfactoriamente");
-            }      
-        } 
-        catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null,ex);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void icon2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon2MouseEntered
+        JOptionPane.showMessageDialog(null,"El campo CEDULA esta vacio", "informacion", 2);
+    }//GEN-LAST:event_icon2MouseEntered
     
     public static void main(String args[]){
         /* Set the Nimbus look and feel */
@@ -1389,6 +1391,7 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JButton btnactualizar;
     private javax.swing.JButton btnbuscar;
     private javax.swing.JButton btncancelar;
+    private javax.swing.JButton btneliminar;
     private javax.swing.JButton btnguardar;
     private javax.swing.JButton btnlimpiar;
     public static javax.swing.JComboBox cbocedula;
@@ -1406,7 +1409,6 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel icon6;
     private javax.swing.JLabel icon7;
     private javax.swing.JLabel icon8;
-    private javax.swing.JButton jButton1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JFormattedTextField jFormattedTextField1;
@@ -1423,15 +1425,14 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JLayeredPane jLayeredPane3;
     private javax.swing.JLayeredPane jLayeredPane4;
+    private javax.swing.JLayeredPane jLayeredPane5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lblicon3;
-    private javax.swing.JLabel lblicon7;
     private java.awt.PopupMenu popupMenu1;
     private javax.swing.JTextField txtapellidos;
     private javax.swing.JTextField txtapellidospm;
