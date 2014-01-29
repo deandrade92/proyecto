@@ -4,7 +4,6 @@ package Formularios;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
@@ -21,7 +20,7 @@ public class Maestro extends javax.swing.JFrame {
         limpiar();
         Ventanas vent= new Ventanas();
         desktopPane.add(vent);
-        vent.show();
+        //vent.show();
         addWindowListener(new java.awt.event.WindowAdapter() {//Se agrga para controlar el evento de cerral el sistema
             @Override
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -186,28 +185,28 @@ public class Maestro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menupacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menupacienteActionPerformed
-        mostarUnavez(desktopPane, new Paciente()) ;
+        mostarUnavez(new Paciente()) ;
         
         
     }//GEN-LAST:event_menupacienteActionPerformed
 
     private void menuHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuHistorialActionPerformed
         // TODO add your handling code here:
-        mostarUnavez(desktopPane, new Historial());
+        mostarUnavez(new Historial());
     }//GEN-LAST:event_menuHistorialActionPerformed
 
     private void menuserviciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuserviciosActionPerformed
         
-        mostarUnavez(desktopPane, new Servicios());
+        mostarUnavez(new Servicios());
     }//GEN-LAST:event_menuserviciosActionPerformed
 
     private void menuusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuusuariosActionPerformed
-        mostarUnavez(desktopPane, new Usuarios());
+        mostarUnavez(new Usuarios());
     }//GEN-LAST:event_menuusuariosActionPerformed
 
     private void repotesdiariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_repotesdiariosActionPerformed
         // TODO add your handling code here:
-        mostarUnavez(desktopPane, new ReporteDia());
+        mostarUnavez(new ReporteDia());
 
     }//GEN-LAST:event_repotesdiariosActionPerformed
 
@@ -216,11 +215,12 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        mostarUnavez(desktopPane, new factura());
+        mostarUnavez(new factura());
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
+        mostarUnavez(new Citas());
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
@@ -321,11 +321,11 @@ public class Maestro extends javax.swing.JFrame {
         }
     
     }
-    public static void mostarUnavez(JDesktopPane escritorio, JInternalFrame ventana){
+    public static void mostarUnavez( JInternalFrame ventana){
         JInternalFrame[] ventanas;
         //ventana= new JInternalFrame();
-        escritorio.add(ventana);
-        ventanas = escritorio.getAllFrames();
+        desktopPane.add(ventana);
+        ventanas = desktopPane.getAllFrames();
         añadirNomVent(ventana);
         //if (v==true) {
             if(estaActiva(ventana)){
@@ -349,7 +349,7 @@ public class Maestro extends javax.swing.JFrame {
                     }
                 }
             }
-            escritorio.remove(ventana);
+            desktopPane.remove(ventana);
         } else {
             estVentanas[obtenerNorVent(ventana)]=true;
             ventana.show();
@@ -371,7 +371,8 @@ public class Maestro extends javax.swing.JFrame {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane desktopPane;
+    //private javax.swing.JDesktopPane desktopPane;
+    public static javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu4;
