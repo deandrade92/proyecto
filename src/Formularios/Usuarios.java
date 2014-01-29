@@ -219,8 +219,25 @@ public class Usuarios extends javax.swing.JInternalFrame{
         mneditar.setText("Modificar");
         jPopupMenu1.add(mneditar);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro y Consulta de Usuarios");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setForeground(new java.awt.Color(0, 204, 204));
@@ -449,8 +466,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon2MouseEntered(evt);
             }
         });
+        jLayeredPane1.add(icon2);
         icon2.setBounds(0, 0, 23, 30);
-        jLayeredPane1.add(icon2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -458,8 +475,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon1MouseEntered(evt);
             }
         });
+        jLayeredPane1.add(icon1);
         icon1.setBounds(0, 0, 23, 30);
-        jLayeredPane1.add(icon1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -467,8 +484,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon4MouseEntered(evt);
             }
         });
+        jLayeredPane2.add(icon4);
         icon4.setBounds(0, 0, 23, 20);
-        jLayeredPane2.add(icon4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -476,8 +493,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon6MouseEntered(evt);
             }
         });
+        jLayeredPane3.add(icon6);
         icon6.setBounds(0, 0, 23, 20);
-        jLayeredPane3.add(icon6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -485,8 +502,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon3MouseEntered(evt);
             }
         });
+        jLayeredPane4.add(icon3);
         icon3.setBounds(0, 0, 23, 20);
-        jLayeredPane4.add(icon3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -494,8 +511,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon5MouseEntered(evt);
             }
         });
+        jLayeredPane5.add(icon5);
         icon5.setBounds(0, 0, 23, 20);
-        jLayeredPane5.add(icon5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -503,8 +520,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon7MouseEntered(evt);
             }
         });
+        jLayeredPane6.add(icon7);
         icon7.setBounds(0, 0, 23, 20);
-        jLayeredPane6.add(icon7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -512,8 +529,8 @@ public class Usuarios extends javax.swing.JInternalFrame{
                 icon8MouseEntered(evt);
             }
         });
+        jLayeredPane7.add(icon8);
         icon8.setBounds(0, 0, 23, 20);
-        jLayeredPane7.add(icon8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -949,6 +966,11 @@ public class Usuarios extends javax.swing.JInternalFrame{
         }
         }
     }//GEN-LAST:event_btneliminarActionPerformed
+
+    private void formInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosed
+        // TODO add your handling code here:
+        Maestro.cerrarVentana(this);
+    }//GEN-LAST:event_formInternalFrameClosed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -139,8 +139,25 @@ public class Servicios extends javax.swing.JInternalFrame {
         });
         jPopupMenu1.add(mneditar);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro y Consulta de servicios");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
@@ -223,7 +240,7 @@ public class Servicios extends javax.swing.JInternalFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnlimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -291,17 +308,14 @@ public class Servicios extends javax.swing.JInternalFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        icon1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Manuel De Andrade\\Documents\\NetBeansProjects\\CentroOdontologico\\src\\Formularios\\triangulo.png")); // NOI18N
-        icon1.setBounds(0, 0, 23, 21);
-        jLayeredPane1.add(icon1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.add(icon1);
+        icon1.setBounds(0, 0, 0, 0);
 
-        icon2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Manuel De Andrade\\Documents\\NetBeansProjects\\CentroOdontologico\\src\\Formularios\\triangulo.png")); // NOI18N
-        icon2.setBounds(0, 0, 23, 21);
-        jLayeredPane2.add(icon2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.add(icon2);
+        icon2.setBounds(0, 0, 0, 0);
 
-        icon3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Manuel De Andrade\\Documents\\NetBeansProjects\\CentroOdontologico\\src\\Formularios\\triangulo.png")); // NOI18N
-        icon3.setBounds(0, 0, 23, 21);
-        jLayeredPane3.add(icon3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane3.add(icon3);
+        icon3.setBounds(0, 0, 0, 0);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -571,6 +585,11 @@ public class Servicios extends javax.swing.JInternalFrame {
              JOptionPane.showMessageDialog(null, ex);
         }
     }//GEN-LAST:event_mneditarActionPerformed
+
+    private void formInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosed
+        // TODO add your handling code here:
+        Maestro.cerrarVentana(this);
+    }//GEN-LAST:event_formInternalFrameClosed
 
     
     public static void main(String args[]) {

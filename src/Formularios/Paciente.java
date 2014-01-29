@@ -43,6 +43,7 @@ public class Paciente extends javax.swing.JInternalFrame {
         icon6.setVisible(false);
         icon7.setVisible(false);
         icon8.setVisible(false);
+        
     }
     
         
@@ -184,8 +185,26 @@ public class Paciente extends javax.swing.JInternalFrame {
             }
         });
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconifiable(true);
         setTitle("Registro y Consulta De Pacientes");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -515,8 +534,8 @@ public class Paciente extends javax.swing.JInternalFrame {
                 icon5MouseEntered(evt);
             }
         });
+        jLayeredPane2.add(icon5);
         icon5.setBounds(0, 0, 23, 30);
-        jLayeredPane2.add(icon5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -524,8 +543,8 @@ public class Paciente extends javax.swing.JInternalFrame {
                 icon3MouseEntered(evt);
             }
         });
+        jLayeredPane3.add(icon3);
         icon3.setBounds(0, 0, 23, 20);
-        jLayeredPane3.add(icon3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -533,8 +552,8 @@ public class Paciente extends javax.swing.JInternalFrame {
                 icon6MouseEntered(evt);
             }
         });
+        jLayeredPane4.add(icon6);
         icon6.setBounds(0, 0, 23, 30);
-        jLayeredPane4.add(icon6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -542,8 +561,8 @@ public class Paciente extends javax.swing.JInternalFrame {
                 icon1MouseEntered(evt);
             }
         });
+        jLayeredPane5.add(icon1);
         icon1.setBounds(0, 0, 23, 20);
-        jLayeredPane5.add(icon1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -551,8 +570,8 @@ public class Paciente extends javax.swing.JInternalFrame {
                 icon2MouseEntered(evt);
             }
         });
+        jLayeredPane5.add(icon2);
         icon2.setBounds(0, 0, 23, 20);
-        jLayeredPane5.add(icon2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formularios/triangulo.png"))); // NOI18N
         icon4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1355,38 +1374,13 @@ public class Paciente extends javax.swing.JInternalFrame {
     private void icon2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon2MouseEntered
         JOptionPane.showMessageDialog(null,"El campo CEDULA esta vacio", "informacion", 2);
     }//GEN-LAST:event_icon2MouseEntered
-    
-    public static void main(String args[]){
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Paciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Paciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Paciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Paciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Paciente().setVisible(true);
-            }
-        });
-    }
+    private void formInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosed
+        // TODO add your handling code here:
+        Maestro.cerrarVentana(this);
+    }//GEN-LAST:event_formInternalFrameClosed
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnactualizar;
     private javax.swing.JButton btnbuscar;

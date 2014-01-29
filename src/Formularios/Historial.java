@@ -1076,12 +1076,11 @@ public class Historial extends javax.swing.JInternalFrame {
 
     private void formInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosed
         // TODO add your handling code here:
-        Maestro.setV(false);
+        Maestro.cerrarVentana(this);
     }//GEN-LAST:event_formInternalFrameClosed
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
         // TODO add your handling code here:
-        Maestro.setV(true);
     }//GEN-LAST:event_formInternalFrameOpened
 
     private void rbtnasmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnasmaActionPerformed
